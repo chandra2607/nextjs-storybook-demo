@@ -1,0 +1,131 @@
+// Button Sizes
+$button-fit:max-content;
+$button-full:100%;
+
+// Button Font Sizes
+$button-font-xxsmall: 10px;
+$button-font-xsmall: 12px;
+$button-font-small: 14px;
+$button-font-medium: 16px;
+$button-font-large: 18px;
+$button-font-xlarge: 20px;
+$button-font-xxlarge: 24px;
+$button-font-xxxlarge: 28px;
+
+
+// Button Colors
+$button-primary-bg: #007bff;
+$button-primary-text: #fff;
+$button-secondary-bg: #6c757d;
+$button-secondary-text: #fff;
+$button-success-bg: #28a745;
+$button-success-text: #fff;
+$button-danger-bg: #dc3545;
+$button-danger-text: #fff;
+
+// Button Border Radius
+$button-border-radius: 4px;
+
+// Button Hover States
+$button-hover-bg: darken($button-primary-bg, 10%);
+$button-hover-text: #fff;
+
+// Button Padding
+$button-padding-xsmall: 4px 8px;
+$button-padding-small: 8px 12px;
+$button-padding-medium: 12px 16px;
+$button-padding-large: 16px 20px;
+$button-padding-xlarge: 20px 24px;
+
+// Button Typography
+$button-font-xsmall: 12px;
+$button-font-small: 14px;
+$button-font-medium: 16px;
+$button-font-large: 18px;
+$button-font-xlarge: 20px;
+
+// Button Transition
+$button-transition-duration: 0.3s;
+$button-transition-property: all;
+
+// Button Box Shadow
+$button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+// Button Disabled State
+$button-disabled-opacity: 0.6;
+
+// Button Focus Outline
+$button-focus-outline: 2px solid $button-primary-bg;
+
+// _variables.scss
+
+:export {
+    // button font sizes
+    buttonFontXXSmall: $button-font-xxsmall;
+    buttonFontXSmall: $button-font-xsmall;
+    buttonFontSmall: $button-font-small;
+    buttonFontMedium: $button-font-medium;
+    buttonFontLarge: $button-font-large;
+    buttonFontXLarge: $button-font-xlarge;
+    buttonFontXXLarge: $button-font-xxlarge;
+    buttonFontXXXLarge: $button-font-xxxlarge;
+
+    // Button Sizes
+    buttonFit: $button-fit;
+    buttonFull: $button-full;
+  
+    // Button Colors
+    buttonPrimaryBg: $button-primary-bg;
+    buttonPrimaryText: $button-primary-text;
+    buttonSecondaryBg: $button-secondary-bg;
+    buttonSecondaryText: $button-secondary-text;
+    buttonSuccessBg: $button-success-bg;
+    buttonSuccessText: $button-success-text;
+    buttonDangerBg: $button-danger-bg;
+    buttonDangerText: $button-danger-text;
+  
+    // Button Border Radius
+    buttonBorderRadius: $button-border-radius;
+  
+    // Button Hover States
+    buttonHoverBg: $button-hover-bg;
+    buttonHoverText: $button-hover-text;
+  
+    // Button Padding
+    buttonPaddingXsmall: $button-padding-xsmall;
+    buttonPaddingSmall: $button-padding-small;
+    buttonPaddingMedium: $button-padding-medium;
+    buttonPaddingLarge: $button-padding-large;
+    buttonPaddingXlarge: $button-padding-xlarge;
+  
+    // Button Typography
+    buttonFontXsmall: $button-font-xsmall;
+    buttonFontSmall: $button-font-small;
+    buttonFontMedium: $button-font-medium;
+    buttonFontLarge: $button-font-large;
+    buttonFontXlarge: $button-font-xlarge;
+  
+    // Button Transition
+    buttonTransitionDuration: $button-transition-duration;
+    buttonTransitionProperty: $button-transition-property;
+  
+    // Button Box Shadow
+    buttonBoxShadow: $button-box-shadow;
+  
+    // Button Disabled State
+    buttonDisabledOpacity: $button-disabled-opacity;
+  
+    // Button Focus Outline
+    buttonFocusOutline: $button-focus-outline;
+  }
+  
+.button{
+    font-size: 16px;
+    padding:10px 20px;
+    border:1px solid transparent;
+    // text-align: center;
+    background-color:$button-primary-bg;
+}
+
+
+

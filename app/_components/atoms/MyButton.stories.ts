@@ -16,44 +16,29 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const Child=()=>(
-  <button>
-    ss
-  </button >
-)
+export const FullWidthButton: Story = {
+  args: {
+    children:"Full Width Button",
+    padding:'buttonPaddingXsmall',
+    backgroundColor:'buttonPrimaryBg',
+    size:'buttonFull'
+  },
+};
+
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
-    
+    children:"Primary Button",
+    padding:'buttonPaddingMedium',
+    backgroundColor:'buttonPrimaryBg',
+    size:'buttonFit'
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    children:"Secondary Button",
+    padding:'buttonPaddingMedium',
+    backgroundColor:'buttonSecondaryBg',
+    size:'buttonFit'
   },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
-
-
-export const Warning: Story = {
-  args: {
-    primary: true,
-    label: 'Delete now',
-    backgroundColor: 'red',
-  }
 };

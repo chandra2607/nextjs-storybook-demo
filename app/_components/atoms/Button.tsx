@@ -1,24 +1,65 @@
-import styles from './Button.module.css'
-interface ButtonProps {
-  primary?: boolean;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
-  label: string;
-  onClick?: () => void;
-  children:React.ReactElement | string,
-  type:'submit'| 'button'
-}
-const Button : React.FC<ButtonProps>= ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  type='button',
-  ...props
-}: ButtonProps) =>(
-    <button type={type}>
-      {props.children}
-    </button >
-  )
+import styles from "./Button.module.scss";
 
-export default Button
+export type LooseString<T extends string> = T | (string & {});
+export interface ButtonProps {
+  children: string;
+  backgroundColor?:
+    | "buttonPrimaryBg"
+    | "buttonPrimaryText"
+    | "buttonSecondaryBg"
+    | "buttonSecondaryText"
+    | "buttonSuccessBg"
+    | "buttonSuccessText"
+    | "buttonDangerBg"
+    | "buttonDangerText";
+  size?: LooseString<"buttonFit" | "buttonFull">;
+  fsize?: LooseString<
+    | "buttonFontXXSmall"
+    | "buttonFontXSmall"
+    | "buttonFontSmall"
+    | "buttonFontMedium"
+    | "buttonFontLarge"
+    | "buttonFontXLarge"
+    | "buttonFontXXLarge"
+    | "buttonFontXXXLarge"
+  >;
+  onClick?: () => void;
+  type?: "submit" | "button";
+  padding: LooseString<
+    | "buttonPaddingXsmall"
+    | "buttonPaddingSmall"
+    | "buttonPaddingMedium"
+    | "buttonPaddingLarge"
+    | "buttonPaddingXlarge"
+  >;
+}
+const Button: React.FC<ButtonProps> = ({
+  size = "buttonFull",
+  backgroundColor,
+  type = "button",
+  ...props
+}: ButtonProps) => {
+  const { fsize = "buttonFontMedium", padding = "buttonPaddingXsmall" } = props;
+  const buttonStyle = {
+    width: styles[size],
+    backgroundColor: backgroundColor
+      ? styles[backgroundColor]
+      : "buttonPrimaryBg",
+    color: styles.buttonPrimaryText,
+    borderRadius: styles.buttonBorderRadius,
+    padding:
+      styles[padding] !== undefined ? styles.buttonPaddingMedium : padding,
+    fontSize: styles[fsize] !== undefined ? styles[fsize] : fsize,
+  };
+  return (
+    <button
+      type={type}
+      style={buttonStyle}
+      className={[styles.button, styles[size]].join(" ")}
+      {...props}
+    >
+      {props.children}
+    </button>
+  );
+};
+export default Button;
