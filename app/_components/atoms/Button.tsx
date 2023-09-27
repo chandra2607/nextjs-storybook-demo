@@ -13,16 +13,13 @@ export interface ButtonProps {
     | "buttonDangerBg"
     | "buttonDangerText";
   size?: LooseString<"buttonFit" | "buttonFull">;
-  fsize?: LooseString<
-    | "buttonFontXXSmall"
-    | "buttonFontXSmall"
+  fsize?:LooseString<"buttonFontXXSmall"| "buttonFontXSmall"
     | "buttonFontSmall"
     | "buttonFontMedium"
     | "buttonFontLarge"
     | "buttonFontXLarge"
     | "buttonFontXXLarge"
-    | "buttonFontXXXLarge"
-  >;
+    | "buttonFontXXXLarge">;
   onClick?: () => void;
   type?: "submit" | "button";
   padding: LooseString<
@@ -32,11 +29,13 @@ export interface ButtonProps {
     | "buttonPaddingLarge"
     | "buttonPaddingXlarge"
   >;
+  disabled?:boolean;
 }
 const Button: React.FC<ButtonProps> = ({
   size = "buttonFull",
   backgroundColor,
   type = "button",
+  disabled=false,
   ...props
 }: ButtonProps) => {
   const { fsize = "buttonFontMedium", padding = "buttonPaddingXsmall" } = props;
@@ -54,8 +53,9 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type={type}
+      disabled={disabled}
       style={buttonStyle}
-      className={[styles.button, styles[size]].join(" ")}
+      className={[styles.button,disabled?styles.disabled:null, styles[size]].join(" ")}
       {...props}
     >
       {props.children}

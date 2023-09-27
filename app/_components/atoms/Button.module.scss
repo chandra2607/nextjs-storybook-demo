@@ -57,6 +57,9 @@ $button-disabled-opacity: 0.6;
 // Button Focus Outline
 $button-focus-outline: 2px solid $button-primary-bg;
 
+.disabled{
+  background-color: $button-secondary-bg !important;
+}
 // _variables.scss
 
 :export {

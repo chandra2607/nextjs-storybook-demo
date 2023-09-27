@@ -9,7 +9,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    // backgroundColor: { control: 'color' },
   },
 } satisfies Meta<typeof Button>;
 
@@ -21,7 +21,8 @@ export const FullWidthButton: Story = {
     children:"Full Width Button",
     padding:'buttonPaddingXsmall',
     backgroundColor:'buttonPrimaryBg',
-    size:'buttonFull'
+    size:'buttonFull',
+    fsize:'buttonFontLarge'
   },
 };
 
@@ -34,11 +35,12 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const DangerButton: Story = {
   args: {
-    children:"Secondary Button",
+    children:"Danger Button",
     padding:'buttonPaddingMedium',
-    backgroundColor:'buttonSecondaryBg',
-    size:'buttonFit'
+    backgroundColor:'buttonDangerBg',
+    size:'buttonFit',
+    disabled:true
   },
 };
