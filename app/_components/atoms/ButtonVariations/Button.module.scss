@@ -1,0 +1,37 @@
+// Button Sizes
+$button-full: 100%;
+
+.button {
+  width: max-content;
+  border-radius: 10px;
+  background-color: #007bff;
+  border: 1px solid transparent;
+}
+// Button Colors
+.buttonPrimary {
+  background-color: #27005D;
+  color:white;
+}
+.buttonSecondary {
+  background-color: #7091F5;
+  color:white;
+}
+.buttonDanger {
+  background-color: #D80032;
+  color:#fff;
+}
+
+// Button Border Radius
+.buttonSmall {
+  padding: 10px 20px;
+}
+.buttonMedium {
+  padding: 15px 30px;
+}
+.buttonLarge {
+  padding: 30px 60px;
+}
+.buttonDisabled {
+  background-color: rgba(36, 37, 39, 0.5); /* Reduce opacity by adjusting the alpha value */
+  cursor: not-allowed; 
+}

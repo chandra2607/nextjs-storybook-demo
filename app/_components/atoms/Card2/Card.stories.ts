@@ -6,12 +6,12 @@ const meta = {
   title: 'Example/CustomCard',
   component: Card,
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {
     // backgroundColor: { control: 'color' },
-  },
+  }
 } satisfies Meta<typeof Card>;
 
 export default meta;
@@ -19,21 +19,24 @@ type Story = StoryObj<typeof meta>;
 
 export const PrimaryCardVariant2: Story = {
   args: {
-    title:'Primary Card',
-    buttonText:'show',
-    description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, eos.',
-    type:'primary',
-    image:'https://i.insider.com/60638bd66183e1001981966a?width=1136&format=jpeg'
-    },
+    title: 'Primary Card',
+    buttonText: 'show',
+    description:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, eos.',
+    type: 'primary',
+    image:
+      'https://i.insider.com/60638bd66183e1001981966a?width=1136&format=jpeg'
+  }
 };
 
 export const SecondaryCardVariant2: Story = {
   args: {
-    title:'Secondary Card',
-    buttonText:'show',
-    description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, eos.',
-    type:'secondary',
-    image:'https://i.insider.com/60638bd66183e1001981966a?width=1136&format=jpeg'
-    },
+    title: 'Secondary Card',
+    buttonText: 'show',
+    description:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, eos.',
+    type: 'secondary',
+    image:
+      'https://i.insider.com/60638bd66183e1001981966a?width=1136&format=jpeg'
   }
-
+};

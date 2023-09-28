@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "pretty": "prettier --config .prettierrc app/**/*.{js,ts,tsx,jsx,scss,css} --write",
+    "dev": "npm run pretty && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -30,6 +31,7 @@
     "@storybook/nextjs": "^7.4.5",
     "@storybook/react": "^7.4.5",
     "@storybook/testing-library": "^0.2.1",
+    "prettier": "^3.0.3",
     "sass": "^1.68.0",
     "storybook": "^7.4.5"
   }
